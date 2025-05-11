@@ -2,10 +2,19 @@
 module.exports = {
   darkMode: ["class"],
   content: [
+<<<<<<< HEAD
     './pages/**/*.{js,jsx}',
     './components/**/*.{js,jsx}',
     './app/**/*.{js,jsx}',
     './src/**/*.{js,jsx}',
+=======
+    "./pages/**/*.{js,jsx}",
+    "./components/**/*.{js,jsx}",
+    "./app/**/*.{js,jsx}",
+    "./src/**/*.{js,jsx}",
+    "*.{js,jsx}",
+    "*.{js,ts,jsx,tsx,mdx}",
+>>>>>>> main
   ],
   theme: {
     container: {
@@ -73,4 +82,8 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
+<<<<<<< HEAD
 } 
+=======
+}
+>>>>>>> main

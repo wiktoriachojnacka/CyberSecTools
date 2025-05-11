@@ -1,0 +1,146 @@
+.tool-card {
+  position: relative;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: var(--bg-card);
+  backdrop-filter: blur(4px);
+  transition: all 0.3s;
+  margin-top: 1rem;
+}
+
+.tool-card.hovered {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+}
+
+/* Glowing border effect */
+.glow-border {
+  position: absolute;
+  inset: 0;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(139, 92, 246, 0.5);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.glow-border.visible {
+  opacity: 1;
+}
+
+.card-content {
+  padding: 0;
+}
+
+.card-header {
+  padding: 1.5rem;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Tech pattern overlay */
+.tech-pattern {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  opacity: 0.3;
+}
+
+.pattern-h-line {
+  grid-column: 1 / -1;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.pattern-v-line {
+  grid-row: 1 / -1;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.icon-container {
+  position: relative;
+  z-index: 10;
+  transform: scale(1);
+  transition: transform 0.3s;
+}
+
+.icon-container.scale {
+  transform: scale(1.1);
+}
+
+/* Glowing dot */
+.glow-dot {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--cyan);
+  transition: all 0.3s;
+  opacity: 0.5;
+}
+
+.glow-dot.bright {
+  opacity: 1;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #a5f3fc;
+}
+
+.card-description {
+  color: rgba(173, 216, 230, 0.7);
+  font-size: 0.875rem;
+  margin-bottom: 1.25rem;
+}
+
+.launch-button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #a78bfa;
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0;
+}
+
+.launch-button:hover {
+  color: #22d3ee;
+}
+
+.prompt {
+  margin-right: 0.25rem;
+  opacity: 0.7;
+}
+
+.arrow-icon {
+  margin-left: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.3s;
+}
+
+.arrow-icon.move {
+  transform: translateX(0.25rem);
+}

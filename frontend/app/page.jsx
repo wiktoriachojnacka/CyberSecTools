@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ToolCard } from "@/components/tool-card"
 import { Lock, Search, Globe, Brain, Keyboard, Archive, FileText, KeyRound, ScrollText } from "lucide-react"
 import { Navbar } from "@/components/navbar"
@@ -59,6 +60,15 @@ export default function Home() {
       color: "from-cyan-500/20 to-indigo-500/20",
     },
   ]
+=======
+import Link from "next/link"
+import { Navbar } from "@/components/navbar"
+import { ToolCard } from "@/components/tool-card"
+import { getAllTools } from "@/lib/tools"
+
+export default function Home() {
+  const tools = getAllTools()
+>>>>>>> main
 
   return (
     <main className="min-h-screen bg-[#0a0b1e] text-white font-mono relative overflow-hidden">
@@ -93,6 +103,7 @@ export default function Home() {
         </header>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
           {tools.map((tool, index) => (
             <ToolCard
               key={index}
@@ -101,9 +112,19 @@ export default function Home() {
               description={tool.description}
               color={tool.color}
             />
+=======
+          {tools.map((tool) => (
+            <Link key={tool.id} href={`/tools/${tool.slug}`} className="block">
+              <ToolCard icon={tool.icon} title={tool.title} description={tool.description} color={tool.color} />
+            </Link>
+>>>>>>> main
           ))}
         </div>
       </div>
     </main>
   )
+<<<<<<< HEAD
 } 
+=======
+}
+>>>>>>> main
