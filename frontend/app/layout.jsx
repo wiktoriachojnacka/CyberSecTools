@@ -1,4 +1,3 @@
-import type React from "react"
 import "./globals.css"
 import { Roboto_Mono } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -11,14 +10,10 @@ const robotoMono = Roboto_Mono({
 export const metadata = {
   title: "CyberSecTool - Cybersecurity Microservices",
   description: "A suite of cybersecurity tools as microservices",
-    generator: 'v0.dev'
+  generator: 'v0.dev'
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${robotoMono.variable} font-mono`}>
@@ -28,4 +23,4 @@ export default function RootLayout({
       </body>
     </html>
   )
-}
+} 

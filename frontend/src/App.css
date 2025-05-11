@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-dark: #0a0b1e;
+  --bg-card: #0f1130;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(173, 216, 230, 0.7);
+  --cyan: #22d3ee;
+  --blue: #3b82f6;
+  --purple: #8b5cf6;
+  --violet: #8b5cf6;
+  --fuchsia: #d946ef;
+  --indigo: #6366f1;
+  --border-glow: rgba(139, 92, 246, 0.5);
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.app {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Cybernetic background */
+.cyber-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.radial-gradient {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(98, 0, 255, 0.15), transparent 70%);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(5, 5, 20, 0.8), rgba(5, 5, 20, 0.8));
+}
+
+.grid-lines {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(40, 1fr);
+  grid-template-rows: repeat(40, 1fr);
+  opacity: 0.2;
+}
+
+.horizontal-line {
+  grid-column: 1 / -1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(139, 92, 246, 0.5), transparent);
+}
+
+.vertical-line {
+  grid-row: 1 / -1;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(59, 130, 246, 0.5), transparent);
+}
+
+/* Main content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  padding-top: 6rem;
+  position: relative;
+  z-index: 10;
+}
+
+.header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.subtitle {
+  color: #90caf9;
+  font-size: 1.125rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+/* Tool card color classes */
+.cyan {
+  color: var(--cyan);
+}
+
+.violet {
+  color: var(--violet);
+}
+
+.blue {
+  color: var(--blue);
+}
+
+.purple {
+  color: var(--purple);
+}
+
+.fuchsia {
+  color: var(--fuchsia);
+}
+
+.indigo {
+  color: var(--indigo);
+}
+
+.cyan-gradient {
+  background: linear-gradient(to right, rgba(34, 211, 238, 0.2), rgba(59, 130, 246, 0.2));
+}
+
+.violet-gradient {
+  background: linear-gradient(to right, rgba(139, 92, 246, 0.2), rgba(168, 85, 247, 0.2));
+}
+
+.blue-gradient {
+  background: linear-gradient(to right, rgba(59, 130, 246, 0.2), rgba(99, 102, 241, 0.2));
+}
+
+.fuchsia-gradient {
+  background: linear-gradient(to right, rgba(217, 70, 239, 0.2), rgba(168, 85, 247, 0.2));
+}
+
+.purple-gradient {
+  background: linear-gradient(to right, rgba(168, 85, 247, 0.2), rgba(139, 92, 246, 0.2));
+}
+
+.indigo-gradient {
+  background: linear-gradient(to right, rgba(99, 102, 241, 0.2), rgba(59, 130, 246, 0.2));
+}
+
+.blue-cyan-gradient {
+  background: linear-gradient(to right, rgba(59, 130, 246, 0.2), rgba(34, 211, 238, 0.2));
+}
+
+.violet-fuchsia-gradient {
+  background: linear-gradient(to right, rgba(139, 92, 246, 0.2), rgba(217, 70, 239, 0.2));
+}
+
+.cyan-indigo-gradient {
+  background: linear-gradient(to right, rgba(34, 211, 238, 0.2), rgba(99, 102, 241, 0.2));
+}
+
+.tool-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+/* Media queries */
+@media (min-width: 768px) {
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .tools-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
