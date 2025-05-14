@@ -137,8 +137,4 @@ export function Navbar() {
       )}
     </nav>
   )
-<<<<<<< HEAD
-} 
-=======
 }
->>>>>>> main

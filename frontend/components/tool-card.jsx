@@ -2,10 +2,6 @@
 
 import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button"
-=======
->>>>>>> main
 import { ArrowRight } from "lucide-react"
 
 export function ToolCard({ icon, title, description, color }) {
@@ -51,26 +47,12 @@ export function ToolCard({ icon, title, description, color }) {
         <div className="p-6">
           <h3 className="text-xl font-semibold mb-2 text-cyan-100">{title}</h3>
           <p className="text-blue-200/70 mb-5 text-sm">{description}</p>
-<<<<<<< HEAD
-          <Button
-            variant="ghost"
-            className="group text-purple-400 hover:text-cyan-300 p-0 h-auto font-mono text-sm tracking-wide hover:bg-transparent"
-          >
+          <div className="group text-purple-400 hover:text-cyan-300 p-0 h-auto font-mono text-sm tracking-wide flex items-center">
             <span className="mr-1 opacity-70">&gt;</span> LAUNCH TOOL
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Button>
-=======
-          <div className="group text-purple-400 hover:text-cyan-300 p-0 h-auto font-mono text-sm tracking-wide flex items-center">
-            <span className="mr-1 opacity-70">&gt;</span> URUCHOM NARZĘDZIE
-            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </div>
->>>>>>> main
         </div>
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
-} 
-=======
 }
->>>>>>> main
