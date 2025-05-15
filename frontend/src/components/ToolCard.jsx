@@ -4,8 +4,14 @@ import { useState } from "react"
 import { FaArrowRight } from "react-icons/fa"
 import "./ToolCard.css"
 
-export function ToolCard({ icon, title, description, color }) {
+export function ToolCard({ icon, title, description, color, onLaunch }) {
   const [isHovered, setIsHovered] = useState(false)
+
+  const handleLaunch = () => {
+    if (onLaunch) {
+      onLaunch();
+    }
+  };
 
   return (
     <div
@@ -37,7 +43,7 @@ export function ToolCard({ icon, title, description, color }) {
         <div className="card-body">
           <h3 className="card-title">{title}</h3>
           <p className="card-description">{description}</p>
-          <button className="launch-button">
+          <button className="launch-button" onClick={handleLaunch}>
             <span className="prompt">&gt;</span> LAUNCH TOOL
             <FaArrowRight className={`arrow-icon ${isHovered ? "move" : ""}`} />
           </button>

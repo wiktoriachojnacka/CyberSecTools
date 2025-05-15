@@ -1,13 +1,18 @@
+import { useState } from "react"
 import { Navbar } from "./components/Navbar"
 import { ToolCard } from "./components/ToolCard"
+import FileEncryptor from "./components/FileEncryptor"
 import "./App.css"
 
 // Import icons from react-icons instead of lucide-react
 import { FaLock, FaSearch, FaGlobe, FaBrain, FaKeyboard, FaArchive, FaFileAlt, FaKey, FaScroll } from "react-icons/fa"
 
 function App() {
+  const [activeTool, setActiveTool] = useState(null);
+
   const tools = [
     {
+      id: "encrypt",
       icon: <FaLock className="tool-icon cyan" />,
       title: "Encrypt and check integrity",
       description: "Secure your data with encryption and verify its integrity",
@@ -63,6 +68,14 @@ function App() {
     },
   ]
 
+  const handleToolLaunch = (toolId) => {
+    setActiveTool(toolId);
+  };
+
+  const handleBack = () => {
+    setActiveTool(null);
+  };
+
   return (
     <div className="app">
       {/* Cybernetic background elements */}
@@ -80,24 +93,33 @@ function App() {
       </div>
 
       {/* Navigation Bar */}
-      <Navbar />
+      <Navbar onBack={activeTool ? handleBack : undefined} />
 
       <div className="container">
-        <header className="header">
-          <p className="subtitle">Your comprehensive suite of cybersecurity microservices</p>
-        </header>
+        {!activeTool ? (
+          <>
+            <header className="header">
+              <p className="subtitle">Your comprehensive suite of cybersecurity microservices</p>
+            </header>
 
-        <div className="tools-grid">
-          {tools.map((tool, index) => (
-            <ToolCard
-              key={index}
-              icon={tool.icon}
-              title={tool.title}
-              description={tool.description}
-              color={tool.color}
-            />
-          ))}
-        </div>
+            <div className="tools-grid">
+              {tools.map((tool, index) => (
+                <ToolCard
+                  key={index}
+                  icon={tool.icon}
+                  title={tool.title}
+                  description={tool.description}
+                  color={tool.color}
+                  onLaunch={() => handleToolLaunch(tool.id)}
+                />
+              ))}
+            </div>
+          </>
+        ) : (
+          <div className="tool-container">
+            {activeTool === "encrypt" && <FileEncryptor />}
+          </div>
+        )}
       </div>
     </div>
   )
