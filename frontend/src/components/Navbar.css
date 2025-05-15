@@ -264,3 +264,32 @@
   background-color: rgba(239, 68, 68, 0.2);
   color: #fca5a5;
 }
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.back-button svg {
+  font-size: 1rem;
+}
+
+.mobile-menu .back-button {
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 1rem;
+}

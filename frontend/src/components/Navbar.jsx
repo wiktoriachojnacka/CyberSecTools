@@ -1,10 +1,10 @@
 "use client"
 
 import { useState } from "react"
-import { FaCog, FaUser, FaSignInAlt, FaBars, FaTimes } from "react-icons/fa"
+import { FaCog, FaUser, FaSignInAlt, FaBars, FaTimes, FaArrowLeft } from "react-icons/fa"
 import "./Navbar.css"
 
-export function Navbar() {
+export function Navbar({ onBack }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
@@ -36,6 +36,12 @@ export function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="desktop-nav">
+            {onBack && (
+              <button className="back-button" onClick={onBack}>
+                <FaArrowLeft />
+                Back
+              </button>
+            )}
             {isLoggedIn ? (
               <div className="dropdown">
                 <button className="user-button" onClick={toggleDropdown}>
@@ -78,6 +84,12 @@ export function Navbar() {
       {mobileMenuOpen && (
         <div className="mobile-menu">
           <div className="mobile-menu-content">
+            {onBack && (
+              <button className="mobile-menu-item back-button" onClick={onBack}>
+                <FaArrowLeft />
+                Back
+              </button>
+            )}
             {isLoggedIn ? (
               <>
                 <button className="mobile-menu-item">
