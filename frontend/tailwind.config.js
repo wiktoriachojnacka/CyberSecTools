@@ -1,6 +1,24 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
+  safelist: [
+    "from-cyan-500/20", "to-blue-500/20",
+    "from-cyan-500/30", "to-blue-500/30",
+    "from-violet-500/20", "to-purple-500/20",
+    "from-violet-500/30", "to-purple-500/30",
+    "from-blue-500/20", "to-indigo-500/20",
+    "from-blue-500/30", "to-indigo-500/30",
+    "from-fuchsia-500/20", "to-purple-500/20",
+    "from-fuchsia-500/30", "to-purple-500/30",
+    "from-purple-500/20", "to-violet-500/20",
+    "from-purple-500/30", "to-violet-500/30",
+    "from-indigo-500/20", "to-blue-500/20",
+    "from-indigo-500/30", "to-blue-500/30",
+    "from-blue-500/20", "to-cyan-500/20",
+    "from-blue-500/30", "to-cyan-500/30",
+    "from-violet-500/20", "to-fuchsia-500/20",
+    "from-violet-500/30", "to-fuchsia-500/30",
+  ],
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
