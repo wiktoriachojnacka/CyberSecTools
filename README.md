@@ -1,10 +1,9 @@
-# CyberSecTools
+# <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Locked%20with%20Key.png" alt="Locked with Key" width="25" height="25" /> CyberSecTools
 
 **CyberSecTools** is a modern, open-source suite of cybersecurity tools for encryption, integrity verification, and more. The project is designed as a modular, microservice-based platform with a React frontend and Python backend, ready for cloud deployment and future expansion.
 
 ---
-
-## ✨ Features (Planned & In Progress)
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Alien%20Monster.png" alt="Alien Monster" width="25" height="25" /> Features (Planned & In Progress)
 
 - **File Encryption & Integrity**  
   Encrypt files (AES, RSA), generate and verify checksums (SHA-256, SHA-512), manage keys, and download password-protected ZIP archives.
@@ -32,7 +31,7 @@
 
 ---
 
-## 🏗️ Architecture & Technologies
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Triangular%20Ruler.png" alt="Triangular Ruler" width="25" height="25" /> Architecture & Technologies
 
 - **Frontend:**  
   - React (UI with tiles/buttons)
@@ -59,7 +58,7 @@
     - Deployment to AWS
 ---
 
-## 🚀 Getting Started
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Shooting%20Star.png" alt="Shooting Star" width="25" height="25" /> Getting Started
 
 ### Backend (Python Flask)
 
@@ -95,7 +94,7 @@
 
 ---
 
-## 🗺️ Planned Roadmap
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/World%20Map.png" alt="World Map" width="25" height="25" /> Planned Roadmap
 
 - [ ] Each backend tool will be a separate microservice (Flask/FastAPI) in its own Docker container
 - [ ] Full Docker Compose setup for local development
@@ -105,7 +104,7 @@
 
 ---
 
-## 📦 Example Usage (Encrypt & Check Integrity)
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Keyboard.png" alt="Keyboard" width="25" height="25" /> Example Usage (Encrypt & Check Integrity)
 
 1. Go to the “Encrypt and check integrity” tool in the app.
 2. Select a file, encryption type (e.g., RSA), and hash type (e.g., SHA-256).
@@ -115,15 +114,14 @@
 
 ---
 
-## 📝 Documentation
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Page%20with%20Curl.png" alt="Page with Curl" width="25" height="25" /> Documentation
 
 - Detailed code documentation is in progress.
 
 ---
 
-## 📢 License
-
-📢 License  
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Triangular%20Flag.png" alt="Triangular Flag" width="25" height="25" /> License
+  
 This project is licensed under the [MIT License](LICENSE).
 
 ---
